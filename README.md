@@ -5,7 +5,7 @@
 A **lightweight, client-side security tool** that scans pasted code for **common vulnerabilities** before it reaches production.  
 Perfect for quickly identifying insecure patterns in HTML, JavaScript, and CSS — **all offline**.
 
-**Live Demo:** _(Coming soon via GitHub Pages)_
+**Live Demo:** _(Coming soon)_
 
 ---
 
@@ -50,14 +50,14 @@ npm ci
 
 # Run locally
 npm run dev
+```
 
 Then open: http://127.0.0.1:5173
 
 
 ---
 
-
-## ✅ Roadmap
+##  Roadmap
 
  Add AI-powered code review via OpenAI API
 
