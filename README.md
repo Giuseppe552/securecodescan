@@ -55,8 +55,10 @@ npm run dev
 Then open: http://127.0.0.1:5173
 
 
+---
 
-✅ Roadmap
+
+## ✅ Roadmap
 
  Add AI-powered code review via OpenAI API
 
