@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SecureCodeScan — Live Vulnerability Checker</title>
+  <meta name="description" content="Paste code to detect common security issues (XSS, SQLi, eval, weak crypto, secrets) with fix guidance. All offline." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>SecureCodeScan</h1>
+    <p class="tagline">Paste a snippet. Get a risk score, findings, and fix tips — all offline.</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="controls">
+        <label>
+          Language
+          <select id="language">
+            <option>auto</option>
+            <option>javascript</option>
+            <option>html</option>
+            <option>python</option>
+            <option>php</option>
+            <option>sql</option>
+          </select>
+        </label>
+        <button id="analyze" class="btn">Analyze</button>
+        <button id="clear" class="btn btn-ghost">Clear</button>
+        <button id="download" class="btn btn-secondary">Download report</button>
+      </div>
+
+      <label class="sr-only" for="code">Code</label>
+      <textarea id="code" placeholder="Paste your code here…"></textarea>
+
+      <div class="meter">
+        <div class="bar" aria-hidden="true">
+          <div class="fill" id="meterFill"></div>
+        </div>
+        <div class="score"><strong>Risk:</strong> <span id="risk">0/100</span></div>
+      </div>
+
+      <h2>Findings</h2>
+      <ul id="findings" class="findings"></ul>
+
+      <details class="what">
+        <summary>What we check</summary>
+        <ul>
+          <li>XSS: inline handlers, <code>innerHTML</code>, dangerous DOM sinks</li>
+          <li>JS: <code>eval</code>, <code>Function</code>, <code>setInnerHTML</code>-style usage</li>
+          <li>SQLi: string-built queries in Python/PHP/JS/SQL</li>
+          <li>Secrets: API keys, tokens, passwords in code</li>
+          <li>Crypto: MD5/SHA1, ECB mode, insecure random</li>
+          <li>Mixed content: <code>http://</code> over the wire</li>
+        </ul>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Built with HTML/CSS/JS • No libraries • by <a href="https://github.com/Giuseppe552" target="_blank" rel="noreferrer">Giuseppe</a>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
