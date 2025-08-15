@@ -23,8 +23,7 @@ Perfect for quickly identifying insecure patterns in HTML, JavaScript, and CSS â
 ---
 
 ## ðŸ“¸ Screenshot
-![SecureCodeScan UI](<img width="799" height="906" alt="image" src="https://github.com/user-attachments/assets/3b922634-556a-4621-9ced-196d0e46eb2f" />
-)
+![SecureCodeScan UI](28d90f35-a4cb-4b98-8854-880e727f16c4.png)
 
 ---
 
